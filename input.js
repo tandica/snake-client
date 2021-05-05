@@ -9,6 +9,12 @@ let dir = {
     down: '\u0073'
 }
 
+let msg = {
+    t: '\u0074',
+    m: '\u006D',
+    p: '\u0070'
+}
+
 const handleUserInput = function (key) {
     if (key === '\u0003') {
         console.log('exited');
@@ -21,6 +27,12 @@ const handleUserInput = function (key) {
         connection.write('Move: up');
     } else if (key === dir.down) {
         connection.write('Move: down');
+    } else if (key === msg.t) {
+        connection.write('Say: whats up');
+    } else if (key === msg.m) {
+        connection.write('Say: im hungry');
+    } else if (key === msg.p) {
+        connection.write('Say: craving donuts');
     }
 };
 
