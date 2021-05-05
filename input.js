@@ -1,19 +1,20 @@
 const net = require("net");
+const { IP, PORT, dir, msg } = require("./constants");
 
 let connection;
 
-let dir = {
-    left: '\u0061',
-    right: '\u0064',
-    up: '\u0077',
-    down: '\u0073'
-}
+// let dir = {
+//     left: '\u0061',
+//     right: '\u0064',
+//     up: '\u0077',
+//     down: '\u0073'
+// }
 
-let msg = {
-    t: '\u0074',
-    m: '\u006D',
-    p: '\u0070'
-}
+// let msg = {
+//     t: '\u0074',
+//     m: '\u006D',
+//     p: '\u0070'
+// }
 
 const handleUserInput = function (key) {
     if (key === '\u0003') {
